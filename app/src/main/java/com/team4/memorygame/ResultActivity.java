@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
@@ -39,6 +40,11 @@ public class ResultActivity extends AppCompatActivity {
             textScoreComment.setText(getString(R.string.default_score_comment));
         }
 
+    }
+
+    public void onReturnToMainClick(View view){
+        startActivity(new Intent(ResultActivity.this, MainActivity.class));
+        finish();
     }
 
     public int getBestScore(){

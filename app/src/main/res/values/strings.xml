@@ -34,7 +34,7 @@
 
     <string name="match_counter">Matches</string>
     <string name="timer_counter">Timer</string>
-    <string name="default_matches">0/6</string>
+    <string name="default_matches">0 out of 6</string>
     <string name="default_time">00:00:00</string>
 
     <!-- Game Hint -->
@@ -47,7 +47,7 @@
 
     <!-- Score Comment -->
     <string name="default_score_comment">You can do better!</string>
-    <string name="best_score_comment">Congrats! It's your best time!</string>
+    <string name="best_score_comment">Congrats! Your best time!</string>
 
     <string-array name="fetch_choices">
         <item>All</item>
