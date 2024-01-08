@@ -6,4 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <TextView
+        android:id="@+id/textGameMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/match_counter"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textTimer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
+        android:text="@string/timer_counter"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textGameMatchContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_matches"
+        app:layout_constraintStart_toStartOf="@+id/textGameMatch"
+        app:layout_constraintTop_toBottomOf="@+id/textGameMatch" />
+
+    <TextView
+        android:id="@+id/textTimerContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_time"
+        app:layout_constraintStart_toStartOf="@+id/textTimer"
+        app:layout_constraintTop_toBottomOf="@+id/textTimer" />
+
+    <TextView
+        android:id="@+id/textGameHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_game_hint"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/gameRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGameMatchContent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gameRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="260dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/back_button_text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pauseButton"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/pause_button_text"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:backgroundTint="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
