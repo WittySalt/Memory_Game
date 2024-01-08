@@ -16,10 +16,10 @@
     <string name="jsoup_settings">Enable Jsoup library: </string>
     <string name="helptext">Please select 6 images</string>
 
-    <string name="default_matches">0/6 matches</string>
-    <string name="default_time">00:00:00</string>
+
     <string name="game_welcome">Welcome to the memory game!</string>
-    <string name="pause_buttontext">Pause</string>
+    <string name="pause_button_text">Pause</string>
+    <string name="back_button_text">Back</string>
     <string name="paused_text">PAUSED</string>
 
     <string name="highscore_first">1ST</string>
@@ -28,6 +28,17 @@
     <string name="highscore_fourth">4TH</string>
     <string name="highscore_fifth">5TH</string>
     <string name="reset_button">Reset Scores</string>
+
+    <string name="match_counter">Matches</string>
+    <string name="timer_counter">Timer</string>
+    <string name="default_matches">0/6</string>
+    <string name="default_time">00:00:00</string>
+
+    <!-- Game Hint -->
+    <string name="default_game_hint">Please open a pair of images.</string>
+    <string name="non_matching_pair">Oops! Try Again!</string>
+    <string name="matching_pair_found">Great! Find the next pair!</string>
+    <string name="win_game">Congratulations! You won the game.</string>
 
     <string-array name="fetch_choices">
         <item>All</item>
