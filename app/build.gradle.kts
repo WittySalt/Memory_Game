@@ -42,4 +42,5 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
     implementation ("org.jsoup:jsoup:1.13.1")
+    implementation("com.airbnb.android:lottie:6.3.0")
 }

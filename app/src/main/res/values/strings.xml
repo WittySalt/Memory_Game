@@ -19,9 +19,12 @@
 
     <string name="game_welcome">Welcome to the memory game!</string>
     <string name="pause_button_text">Pause</string>
+    <string name="resume_button_text">Resume</string>
     <string name="back_button_text">Back</string>
     <string name="paused_text">PAUSED</string>
 
+    <string name="your_best_score">Your Best Score</string>
+    <string name="your_current_score">Your Current Score</string>
     <string name="highscore_first">1ST</string>
     <string name="highscore_second">2ND</string>
     <string name="highscore_third">3RD</string>
@@ -41,6 +44,11 @@
     <string name="win_game">Congratulations! You won the game.</string>
     <string name="resume">Resume</string>
     <string name="pause">Pause</string>
+
+    <!-- Score Comment -->
+    <string name="default_score_comment">You can do better!</string>
+    <string name="best_score_comment">Congrats! It's your best time!</string>
+
     <string-array name="fetch_choices">
         <item>All</item>
         <item>6</item>
