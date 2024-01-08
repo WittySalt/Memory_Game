@@ -67,33 +67,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Set grid size
         sharedPreferences = getSharedPreferences("settings", Context.MODE_PRIVATE);
         int gridPreferences = Integer.parseInt(sharedPreferences.getString("grid", "3"));
 
+        //Initialize EditText to autocomplete
+        input = findViewById(R.id.textInputEditText);
+        String[] websites = getResources().getStringArray(R.array.suggested_urls);
+        //Create adapter for autocomplete EditText view
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, websites);
+        input.setAdapter(adapter);
+
+        //Initialize fetch button
+        fetchButton = findViewById(R.id.fetchButton);
+        fetchButton.setOnClickListener(this);
+
+        //Initialize recycler view for images
         recyclerView = findViewById(R.id.recyclerView);
         recyclerAdapter = new RecyclerAdapter(this);
         recyclerView.setLayoutManager(new GridLayoutManager(this, gridPreferences));
         recyclerView.setAdapter(recyclerAdapter);
 
-        progressBar = findViewById(R.id.progressBar);
-
+        //Initialize help text
         helpText = findViewById(R.id.helpText);
 
-        // Initializing autocomplete for editText
-        input = findViewById(R.id.textInputEditText);
-        String[] websites = getResources().getStringArray(R.array.suggested_urls);
-        ArrayAdapter<String> adapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, websites);
-        input.setAdapter(adapter);
-
+        //Initialize progress bar
+        progressBar = findViewById(R.id.progressBar);
+        //Initialize notification text
         textView = findViewById(R.id.textView);
 
-        fetchButton = findViewById(R.id.fetchButton);
-        fetchButton.setOnClickListener(this);
-
+        //Initialize start button
         startButton = findViewById(R.id.startButton);
         startButton.setOnClickListener(this);
-
     }
 
     @Override
