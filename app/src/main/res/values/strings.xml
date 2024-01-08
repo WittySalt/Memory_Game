@@ -34,7 +34,7 @@
 
     <string name="match_counter">Matches</string>
     <string name="timer_counter">Timer</string>
-    <string name="default_matches">0 out of 6</string>
+    <string name="default_matches">0/6</string>
     <string name="default_time">00:00:00</string>
 
     <!-- Game Hint -->
@@ -52,9 +52,9 @@
     <string-array name="fetch_choices">
         <item>All</item>
         <item>6</item>
-        <item>12</item>
-        <item>24</item>
-        <item>48</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
     </string-array>
 
     <string-array name="grid_choices">

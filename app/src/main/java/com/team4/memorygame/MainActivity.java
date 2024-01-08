@@ -297,12 +297,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Document doc = Jsoup.connect(url).get();
                     Elements elements = doc.select("img[src~=(?i).(png|jpe?g)]");
                     images = (ArrayList<String>) elements.stream()
-                            .limit(20)
                             .map(e -> e.attr("src").startsWith("http") ? e.attr("src") : url + e.attr("src"))
                             .collect(Collectors.toList());
                 } else {
-                    ArrayList<String> image0 = extractAllImgSrcFromUrl(url);
-                    images = image0.stream().limit(20).collect(Collectors.toCollection(ArrayList::new));
+                    images = extractAllImgSrcFromUrl(url);
                 }
 
                 String fetchPreference = sharedPreferences.getString("fetch", "All");

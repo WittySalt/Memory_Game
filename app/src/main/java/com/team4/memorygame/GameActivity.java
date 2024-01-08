@@ -166,7 +166,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 wrongImagePairIsStillOpen = false;
                 defaultText();
             }
-        }, 2000);
+        }, 1500);
     }
 
     public void flipCard(View v) {
@@ -240,7 +240,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         // the sharePreference can only save the primitive type, if list, need to concatenate it to a string.
         // here we just store the highest one
         int highestscore = gethighest();
-        if (currentscores > highestscore){
+        if (currentscores < highestscore){
             SharedPreferences sp = this.getSharedPreferences("highestscore", Activity.MODE_PRIVATE);
             SharedPreferences.Editor editor =  sp.edit();
             editor.putInt("highestscore",currentscores);
@@ -250,7 +250,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     public  int gethighest(){
         SharedPreferences sp = this.getSharedPreferences("highestscore", Activity.MODE_PRIVATE);
-        return sp.getInt("highestscore",0);
+        return sp.getInt("highestscore",1000000000);
     }
 
     @Override
