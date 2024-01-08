@@ -42,6 +42,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
@@ -296,10 +297,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Document doc = Jsoup.connect(url).get();
                     Elements elements = doc.select("img[src~=(?i).(png|jpe?g)]");
                     images = (ArrayList<String>) elements.stream()
+                            .limit(20)
                             .map(e -> e.attr("src").startsWith("http") ? e.attr("src") : url + e.attr("src"))
                             .collect(Collectors.toList());
                 } else {
-                    images = extractAllImgSrcFromUrl(url);
+                    ArrayList<String> image0 = extractAllImgSrcFromUrl(url);
+                    images = image0.stream().limit(20).collect(Collectors.toCollection(ArrayList::new));
                 }
 
                 String fetchPreference = sharedPreferences.getString("fetch", "All");
