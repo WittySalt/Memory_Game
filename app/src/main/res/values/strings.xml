@@ -34,7 +34,7 @@
 
     <string name="match_counter">Matches</string>
     <string name="timer_counter">Timer</string>
-    <string name="default_matches">0/6</string>
+    <string name="default_matches">0 out of 6</string>
     <string name="default_time">00:00:00</string>
 
     <!-- Game Hint -->

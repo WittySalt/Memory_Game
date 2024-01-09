@@ -64,9 +64,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         timerIsRunning = false;
         timerSeconds = 0;
 
-        // set the image relevant like adaptor and get the imgs
+        // set the image relevant like adaptor and get the images
         SharedPreferences Preferences = getSharedPreferences("settings", Context.MODE_PRIVATE);
-        // get the View and get the imgs
+        // get the View and get the images
         RecyclerView gameRecyclerView = findViewById(R.id.gameRecyclerView);
         gameImages = GameImage.createGameImageList(this);
         
