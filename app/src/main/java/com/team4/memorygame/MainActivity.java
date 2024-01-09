@@ -29,6 +29,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.model.GlideUrl;
+import com.bumptech.glide.load.model.LazyHeaders;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -283,8 +285,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void run() {
             try {
-                if (!URLUtil.isValidUrl(url)) {
-                    mHandler.post(new Runnable() {
+                            if (!URLUtil.isValidUrl(url)) {
+                                mHandler.post(new Runnable() {
                         @Override
                         public void run() {
                             Toast.makeText(getApplicationContext(), "Invalid URL, please try again.", Toast.LENGTH_SHORT).show();
@@ -359,7 +361,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     try {
                         Bitmap bmp;
                         if (useGlide) {
-                            bmp = Glide.with(getApplicationContext()).asBitmap().load(url).submit().get();
+                            LazyHeaders headers = new LazyHeaders.Builder()
+                                    .addHeader("User-Agent", "Mozilla")
+                                    .build();
+                            GlideUrl glideUrl = new GlideUrl(url, headers);
+
+                            // using glide to load images
+                            bmp = Glide.with(getApplicationContext())
+                                    .asBitmap()
+                                    .load(glideUrl)
+                                    .submit()
+                                    .get();
                         } else {
                             bmp = BitmapFactory.decodeStream(new URL(url).openConnection().getInputStream());
                         }
@@ -379,8 +391,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
             }).run();
-
-
         }
 
         private void concludeUI(boolean success) {
