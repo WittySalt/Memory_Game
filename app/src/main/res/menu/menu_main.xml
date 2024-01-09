@@ -8,9 +8,4 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/highscore"
-        android:orderInCategory="100"
-        android:title="Highscores"
-        app:showAsAction="never" />
 </menu>

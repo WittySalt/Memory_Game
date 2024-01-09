@@ -19,9 +19,12 @@
 
     <string name="game_welcome">Welcome to the memory game!</string>
     <string name="pause_button_text">Pause</string>
+    <string name="resume_button_text">Resume</string>
     <string name="back_button_text">Back</string>
     <string name="paused_text">PAUSED</string>
 
+    <string name="your_best_score">Your Best Score</string>
+    <string name="your_current_score">Your Current Score</string>
     <string name="highscore_first">1ST</string>
     <string name="highscore_second">2ND</string>
     <string name="highscore_third">3RD</string>
@@ -31,7 +34,7 @@
 
     <string name="match_counter">Matches</string>
     <string name="timer_counter">Timer</string>
-    <string name="default_matches">0/6</string>
+    <string name="default_matches">0 out of 6</string>
     <string name="default_time">00:00:00</string>
 
     <!-- Game Hint -->
@@ -39,13 +42,19 @@
     <string name="non_matching_pair">Oops! Try Again!</string>
     <string name="matching_pair_found">Great! Find the next pair!</string>
     <string name="win_game">Congratulations! You won the game.</string>
+    <string name="resume">Resume</string>
+    <string name="pause">Pause</string>
+
+    <!-- Score Comment -->
+    <string name="default_score_comment">You can do better!</string>
+    <string name="best_score_comment">Congrats! Your best time!</string>
 
     <string-array name="fetch_choices">
         <item>All</item>
         <item>6</item>
-        <item>12</item>
-        <item>24</item>
-        <item>48</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
     </string-array>
 
     <string-array name="grid_choices">

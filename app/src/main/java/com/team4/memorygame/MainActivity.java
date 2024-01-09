@@ -42,6 +42,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
@@ -275,8 +276,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LoadImagesTask(String url) {
             // Trim trailing slashes in constructor
             this.url = url.endsWith("/") ? url.substring(0, url.length() - 1) : url;
-            useGlide = sharedPreferences.getString("glide", "No").equals("Yes");
-            useJsoup = sharedPreferences.getString("jsoup", "No").equals("Yes");
+            useGlide = "Yes".equals("Yes");
+            useJsoup = "Yes".equals("Yes");
         }
 
         @Override
